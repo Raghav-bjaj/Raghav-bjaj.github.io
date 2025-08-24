@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhishek Choudhary | Portfolio</title>
+  <meta name="description" content="Abhishek Choudhary — Computer Science Engineer | AI/ML & Full-Stack Development" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #111827; /* Dark Blue-Gray */
+      color: #E5E7EB; /* Light Gray */
+      font-family: 'Inter', sans-serif;
+    }
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .section {
+      scroll-margin-top: 80px;
+    }
+    .card {
+      background: rgba(31, 41, 55, 0.5); /* Semi-transparent dark card */
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.3);
+    }
+    .gradient-title {
+      background: linear-gradient(to right, #F97316, #EA580C); /* Orange Gradient */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .btn {
+      border-radius: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .btn-primary {
+      background: #F97316; /* Bright Orange */
+      color: #111827;
+      border: 1px solid #F97316;
+    }
+    .btn-primary:hover {
+      background: #FB923C;
+      transform: scale(1.05);
+    }
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #E5E7EB;
+    }
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    .header-link {
+      color: #9CA3AF; /* Medium Gray */
+      transition: color 0.2s ease;
+      position: relative;
+      padding-bottom: 4px;
+    }
+    .header-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #F97316;
+        transition: width 0.3s ease;
+    }
+    .header-link:hover {
+      color: #F3F4F6;
+    }
+    .header-link:hover::after {
+        width: 100%;
+    }
+    .tech-tag {
+        background-color: rgba(249, 115, 22, 0.1);
+        color: #FB923C;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+  </style>
+</head>
+<body class="min-h-screen relative">
+
+  <header class="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#home" class="text-2xl font-bold font-display gradient-title">Abhishek Choudhary</a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#about" class="header-link">About</a>
+          <a href="#skills" class="header-link">Skills</a>
+          <a href="#projects" class="header-link">Projects</a>
+          <a href="#contact" class="header-link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="relative min-h-screen flex items-center justify-center px-6 pt-20">
+    <div class="absolute inset-0 -z-10 h-full w-full bg-gray-900 bg-[radial-gradient(#F97316_1px,transparent_1px)] [background-size:32px_32px]"></div>
+    <div class="text-center max-w-4xl mx-auto section">
+      <h1 class="text-5xl md:text-7xl font-bold font-display mb-4">
+        <span class="gradient-title">Abhishek Choudhary</span>
+      </h1>
+      <p class="text-2xl text-gray-300 mb-6 font-display">Computer Science Engineer</p>
+      <p class="text-lg text-gray-400 mb-10 max-w-3xl mx-auto">
+        Specializing in <strong>Artificial Intelligence</strong> & <strong>Full-Stack Development</strong>. Building intelligent, scalable applications that turn data into real-world impact.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#projects" class="btn btn-primary">
+          <i data-lucide="folder-git-2"></i>
+          <span>View My Work</span>
+        </a>
+        <a href="https://raw.githubusercontent.com/Raghav-bjaj/Resume/main/Abhishek_Choudhary_SDE_AIML.pdf" target="_blank" class="btn btn-outline">
+          📄 Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 px-6 section">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold font-display gradient-title mb-6">About Me</h2>
+        <div class="card p-8 md:p-12">
+            <p class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                I'm a final-year Computer Science student at <strong>VIT Bhopal</strong>, specializing in AI & Machine Learning with a CGPA of <strong>8.68</strong>. My passion lies at the intersection of robust software engineering and intelligent systems. With over <strong>300 LeetCode problems</strong> solved and major projects deployed to production, I'm eager to tackle new challenges in AI/ML and full-stack development.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+  <section id="skills" class="py-24 px-6 section">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold font-display gradient-title mb-12 text-center">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-orange-500/10 p-3 rounded-lg"><i data-lucide="code-2" class="w-6 h-6 text-orange-400"></i></div>
+                        <h3 class="text-xl font-semibold text-white">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Java</span><span class="tech-tag">Python</span><span class="tech-tag">C++</span><span class="tech-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="card p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-orange-500/10 p-3 rounded-lg"><i data-lucide="terminal-square" class="w-6 h-6 text-orange-400"></i></div>
+                        <h3 class="text-xl font-semibold text-white">Developer Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Docker</span><span class="tech-tag">VS Code</span><span class="tech-tag">IntelliJ IDEA</span><span class="tech-tag">Postman</span><span class="tech-tag">Git</span>
+                    </div>
+                </div>
+                <div class="card p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-orange-500/10 p-3 rounded-lg"><i data-lucide="cuboid" class="w-6 h-6 text-orange-400"></i></div>
+                        <h3 class="text-xl font-semibold text-white">Technologies & Frameworks</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Spring Boot</span><span class="tech-tag">Angular</span><span class="tech-tag">WebSockets</span><span class="tech-tag">GitHub</span><span class="tech-tag">Vercel</span><span class="tech-tag">Render</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section id="projects" class="py-24 px-6 section">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold font-display gradient-title mb-12 text-center">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <div class="card p-8 group flex flex-col justify-between">
+          <div>
+            <div class="transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:max-h-0 max-h-screen opacity-100 overflow-hidden">
+              <div class="flex items-start justify-between mb-4 flex-wrap gap-2">
+                <h3 class="text-2xl font-bold text-white">AI-ML Based Food Preparation Prediction System</h3>
+                <span class="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full whitespace-nowrap">Mar 2025</span>
+              </div>
+              <p class="text-gray-400 mb-4">
+                Developed a deep learning model achieving R² scores of 0.85–0.94, projecting a 15–26% increase in kitchen efficiency.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="tech-tag">TensorFlow</span><span class="tech-tag">Keras</span><span class="tech-tag">Python</span><span class="tech-tag">Scikit-learn</span>
+              </div>
+            </div>
+            <div class="transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:max-h-screen max-h-0 opacity-0 overflow-hidden">
+                <h3 class="text-2xl font-bold text-white mb-4">Food Prediction AI</h3>
+                <ul class="space-y-2 text-gray-400 list-disc list-inside mb-6">
+                    <li>Generated 9,000+ synthetic datasets to capture food correlations.</li>
+                    <li>Optimized neural networks with early stopping and hyperparameter tuning.</li>
+                    <li>Scaled model from single-meal to full-day predictions using 25+ features.</li>
+                    <li>Projected 18-25% reduction in food waste.</li>
+                </ul>
+            </div>
+          </div>
+          <div class="flex gap-4 mt-auto">
+            <a href="https://github.com/Raghav-bjaj/food-prediction-ai" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="github"></i> Code</a>
+            <a href="https://colab.research.google.com/drive/1YYbQMDB1b7_wNEX4wKxrLNr41MS5Mqb4?usp=sharing" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="book-open"></i> Colab</a>
+          </div>
+        </div>
+
+        <div class="card p-8 group flex flex-col justify-between">
+            <div>
+              <div class="transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:max-h-0 max-h-screen opacity-100 overflow-hidden">
+                  <div class="flex items-start justify-between mb-4 flex-wrap gap-2">
+                    <h3 class="text-2xl font-bold text-white">Mess Management System</h3>
+                    <span class="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full whitespace-nowrap">Nov 2024</span>
+                  </div>
+                  <p class="text-gray-400 mb-4">
+                    Centralized system automating billing and records for 6000+ students, improving administrative efficiency by 16–24%.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="tech-tag">Spring Boot</span><span class="tech-tag">Angular</span><span class="tech-tag">MySQL</span><span class="tech-tag">Docker</span>
+                  </div>
+              </div>
+              <div class="transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:max-h-screen max-h-0 opacity-0 overflow-hidden">
+                  <h3 class="text-2xl font-bold text-white mb-4">Mess Management System</h3>
+                  <ul class="space-y-2 text-gray-400 list-disc list-inside mb-6">
+                      <li>Managed student records, bills, and menus via 10+ RESTful APIs.</li>
+                      <li>Deployed on Vercel (Frontend) and Render (Backend).</li>
+                      <li>Planned enhancements include automated reminders and ML integration.</li>
+                  </ul>
+              </div>
+            </div>
+            <div class="flex gap-4 mt-auto">
+              <a href="https://github.com/Raghav-bjaj/mess-management" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="github"></i> Code</a>
+              <a href="https://mess-application-front-end-angular.vercel.app/login" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="monitor"></i> Live</a>
+            </div>
+        </div>
+
+        <div class="card p-8 group flex flex-col justify-between">
+            <div>
+              <div class="transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:max-h-0 max-h-screen opacity-100 overflow-hidden">
+                <div class="flex items-start justify-between mb-4 flex-wrap gap-2">
+                  <h3 class="text-2xl font-bold text-white">Online Multiplayer Mancala Game</h3>
+                  <span class="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full whitespace-nowrap">In Progress</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                  Full-stack Mancala game with real-time 2-player mode using WebSockets for robust bidirectional communication.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span class="tech-tag">Spring Boot</span><span class="tech-tag">WebSockets</span><span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+              <div class="transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:max-h-screen max-h-0 opacity-0 overflow-hidden">
+                  <h3 class="text-2xl font-bold text-white mb-4">Multiplayer Mancala Game</h3>
+                  <ul class="space-y-2 text-gray-400 list-disc list-inside mb-6">
+                      <li>Engineered server-side logic for game hosting, joining, and turn-based play.</li>
+                      <li>Designed a responsive front-end with dynamic board rendering.</li>
+                      <li>Containerized and deployed the application on Render for public access.</li>
+                  </ul>
+              </div>
+            </div>
+            <div class="flex gap-4 mt-auto">
+              <a href="https://github.com/Raghav-bjaj/mancala-game" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="github"></i> Code</a>
+              <a href="https://mancala-game.onrender.com" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="monitor"></i> Live</a>
+            </div>
+        </div>
+
+        <div class="card p-8 group flex flex-col justify-between">
+          <div>
+            <div class="transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:max-h-0 max-h-screen opacity-100 overflow-hidden">
+              <div class="flex items-start justify-between mb-4 flex-wrap gap-2">
+                <h3 class="text-2xl font-bold text-white">Breast Cancer Detection using CNN</h3>
+                <span class="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full whitespace-nowrap">Sep 2024</span>
+              </div>
+              <p class="text-gray-400 mb-4">
+                Enhanced diagnostic accuracy by over 35-40% using CNNs on 5,000+ medical imaging datasets.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="tech-tag">CNN</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Python</span>
+              </div>
+            </div>
+            <div class="transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:max-h-screen max-h-0 opacity-0 overflow-hidden">
+                <h3 class="text-2xl font-bold text-white mb-4">Breast Cancer Detection</h3>
+                <ul class="space-y-2 text-gray-400 list-disc list-inside mb-6">
+                    <li>Developed baseline ML models on 8,000+ CSV records.</li>
+                    <li>Significantly boosted diagnostic capabilities with deep learning.</li>
+                    <li>A collaborative project delivered by a team of five.</li>
+                </ul>
+            </div>
+          </div>
+          <div class="flex gap-4 mt-auto">
+            <a href="https://github.com/Raghav-bjaj/breast-cancer-detection" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section id="in-progress" class="py-24 px-6 section">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold font-display gradient-title mb-12 text-center">Currently Working On</h2>
+      <div class="card p-8">
+        <div class="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
+          <div class="bg-orange-500/10 p-4 rounded-lg self-start">
+            <i data-lucide="zap" class="w-8 h-8 text-orange-400"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-3">Integrating Food Prediction AI with Mess Management</h3>
+            <p class="text-gray-400 mb-4">
+                Fusing my two key projects to create a smarter, more efficient system. By integrating the <strong>Food Prediction AI</strong> with the <strong>Mess Management System</strong>, I aim to create a powerful tool that optimizes kitchen operations in real-time.
+            </p>
+            <ul class="text-gray-400 space-y-2 list-disc list-inside">
+              <li>Feed historical consumption data into the AI for precise demand forecasting.</li>
+              <li>Automate ingredient procurement and meal prep schedules.</li>
+              <li>Drastically reduce food waste and operational costs.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 px-6 section">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold font-display gradient-title mb-6">Get In Touch</h2>
+      <p class="text-gray-400 mb-10 text-lg">I'm currently seeking new opportunities. Feel free to reach out!</p>
+      <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
+        <a href="mailto:abhi1312choudhary@gmail.com" class="header-link text-lg"><i data-lucide="mail" class="inline-block mr-2 w-5 h-5"></i>Email</a>
+        <a href="https://github.com/Raghav-bjaj" target="_blank" class="header-link text-lg"><i data-lucide="github" class="inline-block mr-2 w-5 h-5"></i>GitHub</a>
+        <a href="https://linkedin.com/in/abhishek-choudhary-991634251/" target="_blank" class="header-link text-lg"><i data-lucide="linkedin" class="inline-block mr-2 w-5 h-5"></i>LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 px-6 text-center text-gray-500 text-sm border-t border-gray-700/50">
+    &copy; 2025 Abhishek Choudhary. All rights reserved.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
