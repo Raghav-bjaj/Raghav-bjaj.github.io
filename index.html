@@ -42,6 +42,10 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+    .highlight {
+      color: #FB923C; /* A nice, readable orange */
+      font-weight: 600;
+    }
     .btn {
       border-radius: 0.5rem;
       padding: 0.75rem 1.5rem;
@@ -68,6 +72,18 @@
     .btn-outline:hover {
       background: rgba(255, 255, 255, 0.1);
       border-color: rgba(255, 255, 255, 0.4);
+      transform: scale(1.02);
+      color: #fff;
+    }
+    .btn-live {
+      border-color: #F97316;
+      color: #F97316;
+      box-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+    }
+    .btn-live:hover {
+      background: rgba(249, 115, 22, 0.1);
+      box-shadow: 0 0 16px rgba(249, 115, 22, 0.6);
+      transform: scale(1.05);
     }
     .header-link {
       color: #9CA3AF; /* Medium Gray */
@@ -99,6 +115,40 @@
         font-size: 0.8rem;
         font-weight: 500;
     }
+    .status-tag {
+        background-color: rgba(52, 211, 153, 0.1);
+        color: #34D399;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .status-tag::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #34D399;
+        animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+    .completed-tag {
+        color: #A5B4FC;
+        background-color: rgba(129, 140, 248, 0.1);
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
   </style>
 </head>
 <body class="min-h-screen relative">
@@ -126,7 +176,7 @@
       </h1>
       <p class="text-2xl text-gray-300 mb-6 font-display">Computer Science Engineer</p>
       <p class="text-lg text-gray-400 mb-10 max-w-3xl mx-auto">
-        Specializing in <strong>Artificial Intelligence</strong> & <strong>Full-Stack Development</strong>. I build intelligent, scalable applications that turn complex data into real-world impact.
+        Specializing in <span class="highlight">Artificial Intelligence</span> & <span class="highlight">Full-Stack Development</span>. I build intelligent, scalable applications that turn complex data into real-world impact.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="#projects" class="btn btn-primary">
@@ -146,7 +196,7 @@
         <div class="card p-8 md:p-12">
             <div class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto space-y-4">
                 <p>
-                    As a final-year Computer Science student at <strong>VIT Bhopal</strong> with a CGPA of <strong>8.68</strong>, I specialize in Artificial Intelligence and Machine Learning. I am passionate about building intelligent, scalable applications, a skill I've honed by solving over <strong>500</strong> programming and problem-solving questions on various platforms and deploying multiple full-stack projects <strong>to production</strong>.
+                    As a final-year Computer Science student at <span class="highlight">VIT Bhopal</span> with a CGPA of <span class="highlight">8.68</span>, I specialize in Artificial Intelligence and Machine Learning. I am passionate about building intelligent, scalable applications, a skill I've honed by solving over <span class="highlight">500</span> programming and problem-solving questions on various platforms and deploying multiple full-stack projects <span class="highlight">to production</span>.
                 </p>
                 <p>
                     I thrive on transforming complex data into real-world solutions and am actively seeking opportunities where I can contribute to challenging projects in AI/ML and software engineering.
@@ -168,7 +218,7 @@
                 </div>
                 <div class="text-left sm:text-right mt-4 sm:mt-0">
                     <p class="text-gray-300 font-semibold">Expected May 2026</p>
-                    <p class="text-gray-400">CGPA: 8.68 / 10.0</p>
+                    <p class="text-gray-400">CGPA: <span class="highlight">8.68 / 10.0</span></p>
                 </div>
             </div>
         </div>
@@ -225,14 +275,14 @@
           <div>
             <div class="flex items-start justify-between mb-2 flex-wrap gap-2">
               <h3 class="text-2xl font-bold text-white">AI-ML Food Preparation Prediction</h3>
-              <span class="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full whitespace-nowrap">Completed: Mar 2025</span>
+              <span class="completed-tag"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Completed: Mar 2025</span>
             </div>
             <p class="text-orange-400 font-semibold mb-4">
               Objective: To reduce food waste and improve kitchen efficiency by accurately forecasting meal demand using a deep learning model.
             </p>
              <ul class="space-y-2 text-gray-400 list-disc list-inside mb-6">
-                <li>Engineered a model achieving R² scores of 0.85–0.94, projecting an <strong>18-25% reduction in food waste</strong>.</li>
-                <li>Architected a data pipeline to generate 9,000+ synthetic datasets, effectively modeling complex food consumption patterns.</li>
+                <li>Engineered a model achieving R² scores of 0.85–0.94, projecting an <span class="highlight">18-25% reduction in food waste</span>.</li>
+                <li>Architected a data pipeline to generate <span class="highlight">9,000+</span> synthetic datasets, effectively modeling complex food consumption patterns.</li>
                 <li>Optimized neural networks with early stopping and hyperparameter tuning to ensure high accuracy and prevent overfitting.</li>
             </ul>
             <div class="flex flex-wrap gap-2 mb-6">
@@ -248,13 +298,13 @@
             <div>
               <div class="flex items-start justify-between mb-2 flex-wrap gap-2">
                 <h3 class="text-2xl font-bold text-white">Mess Management System</h3>
-                <span class="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full whitespace-nowrap">Completed: Nov 2024</span>
+                <span class="completed-tag"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Completed: Nov 2024</span>
               </div>
               <p class="text-orange-400 font-semibold mb-4">
-                Objective: To design and deploy a full-stack web application to automate billing and record-keeping for over 6,000 students.
+                Objective: To design and deploy a full-stack web application to automate billing and record-keeping for over <span class="highlight">6,000 students</span>.
               </p>
               <ul class="space-y-2 text-gray-400 list-disc list-inside mb-6">
-                  <li>Built a scalable backend with Spring Boot, featuring 10+ RESTful APIs that improved administrative efficiency by <strong>16–24%</strong>.</li>
+                  <li>Built a scalable backend with Spring Boot, featuring 10+ RESTful APIs that improved administrative efficiency by <span class="highlight">16–24%</span>.</li>
                   <li>Developed a responsive and intuitive user interface with Angular to ensure a seamless experience for both students and staff.</li>
                   <li>Containerized the backend with Docker and deployed the full application on Render and Vercel for high availability.</li>
               </ul>
@@ -264,7 +314,7 @@
             </div>
             <div class="flex gap-4 mt-auto">
               <a href="https://github.com/abh1shekChoudhary/MessApplication" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="github"></i> Code</a>
-              <a href="https://mess-application-front-end-angular.vercel.app/login" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="monitor"></i> Live</a>
+              <a href="https://mess-application-front-end-angular.vercel.app/login" target="_blank" class="btn btn-live text-sm py-2 px-4"><i data-lucide="monitor"></i> Live Demo</a>
             </div>
         </div>
 
@@ -272,7 +322,7 @@
             <div>
                 <div class="flex items-start justify-between mb-2 flex-wrap gap-2">
                     <h3 class="text-2xl font-bold text-white">Online Multiplayer Mancala Game</h3>
-                    <span class="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full whitespace-nowrap">In Progress</span>
+                    <span class="status-tag">Actively Developing</span>
                 </div>
                 <p class="text-orange-400 font-semibold mb-4">
                   Objective: To create a real-time, two-player web application using WebSockets for persistent, bidirectional communication.
@@ -288,7 +338,7 @@
             </div>
             <div class="flex gap-4 mt-auto">
               <a href="https://github.com/abh1shekChoudhary/MancalaGame" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="github"></i> Code</a>
-              <a href="https://mancala-game.onrender.com" target="_blank" class="btn btn-outline text-sm py-2 px-4"><i data-lucide="monitor"></i> Live</a>
+              <a href="https://mancala-game.onrender.com" target="_blank" class="btn btn-live text-sm py-2 px-4"><i data-lucide="monitor"></i> Live Demo</a>
             </div>
         </div>
 
@@ -296,13 +346,13 @@
             <div>
               <div class="flex items-start justify-between mb-2 flex-wrap gap-2">
                 <h3 class="text-2xl font-bold text-white">Breast Cancer Detection using CNN</h3>
-                <span class="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full whitespace-nowrap">Completed: Sep 2024</span>
+                <span class="completed-tag"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Completed: Sep 2024</span>
               </div>
               <p class="text-orange-400 font-semibold mb-4">
                 Objective: To develop a deep learning model to improve the accuracy of breast cancer diagnosis from medical imaging data.
               </p>
               <ul class="space-y-2 text-gray-400 list-disc list-inside mb-6">
-                  <li>Trained a Convolutional Neural Network (CNN) on over 5,000 images, enhancing diagnostic accuracy by <strong>35-40%</strong> compared to baseline models.</li>
+                  <li>Trained a CNN on over 5,000 images, enhancing diagnostic accuracy by <span class="highlight">35-40%</span> compared to baseline models.</li>
                   <li>Conducted data preprocessing and augmentation to create a robust and diverse training dataset.</li>
                   <li>Collaborated within a team of five to research, build, and validate the end-to-end classification pipeline.</li>
               </ul>
@@ -329,7 +379,7 @@
           <div>
             <h3 class="text-2xl font-bold text-white mb-3">Integrating Food Prediction AI with Mess Management</h3>
             <p class="text-gray-400 mb-4">
-                Fusing my two key projects to create a smarter, more efficient system. By integrating the <strong>Food Prediction AI</strong> with the <strong>Mess Management System</strong>, I aim to create a powerful tool that optimizes kitchen operations in real-time.
+                Fusing my two key projects to create a smarter, more efficient system. By integrating the <span class="highlight">Food Prediction AI</span> with the <span class="highlight">Mess Management System</span>, I aim to create a powerful tool that optimizes kitchen operations in real-time.
             </p>
             <ul class="text-gray-400 space-y-2 list-disc list-inside">
               <li>Feed historical consumption data from the Mess System into the AI for precise demand forecasting.</li>
@@ -346,10 +396,10 @@
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-4xl font-bold font-display gradient-title mb-6">Get In Touch</h2>
       <p class="text-gray-400 mb-10 text-lg">
-        I am pursuing opportunities as a <strong>Software Developer</strong> or <strong>AI/ML Engineer</strong>, with availability for <strong>internships from January 2026</strong> and <strong>full-time roles from May 2026</strong>. I'm ready to apply my skills to real-world challenges and welcome a conversation about how I can bring value to your team.
+        I am pursuing opportunities as a <span class="highlight">Software Developer</span> or <span class="highlight">AI/ML Engineer</span>, with availability for <span class="highlight">internships from January 2026</span> and <span class="highlight">full-time roles from May 2026</span>. I'm ready to apply my skills to real-world challenges and welcome a conversation about how I can bring value to your team.
       </p>
       <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
-        <a href="mailto:abhi1312choudhary@gmail.com" class="header-link text-lg"><i data-lucide="mail" class="inline-block mr-2 w-5 h-5"></i>Email</a>
+        <a href="mailto:abhi1321choudhary@gmail.com" class="header-link text-lg"><i data-lucide="mail" class="inline-block mr-2 w-5 h-5"></i>Email</a>
         <a href="https://github.com/abh1shekChoudhary" target="_blank" class="header-link text-lg"><i data-lucide="github" class="inline-block mr-2 w-5 h-5"></i>GitHub</a>
         <a href="https://linkedin.com/in/abhishek-choudhary-991634251/" target="_blank" class="header-link text-lg"><i data-lucide="linkedin" class="inline-block mr-2 w-5 h-5"></i>LinkedIn</a>
       </div>
@@ -365,3 +415,4 @@
   </script>
 </body>
 </html>
+
